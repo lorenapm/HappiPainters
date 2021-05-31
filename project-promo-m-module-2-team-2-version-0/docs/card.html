@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a22a8f4330.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="assets/images/pruebas-feas-base.svg"
+    />
+    <title>API Painters</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html"> <div class="header__logo"></div></a>
+    </header>
+
+    <main class="main">
+      <div class="card-wrapper">
+        <section class="preview">
+          <div class="preview__container">
+            <button type="reset" class="preview__reset js-reset">
+              <span class="far fa-trash-alt"></span>
+              <span>Reset</span>
+            </button>
+            <section class="preview__card">
+              <div class="preview__card-data">
+                <h2 class="preview__card-data--name js-name"></h2>
+                <h3 class="preview__card-data--jobTitle js-jobTitle">
+                  Front-end developer
+                </h3>
+              </div>
+              <div class="preview__card-image js__profile-image"></div>
+              <div class="preview__card-socials">
+                <a
+                  class="preview__card-socials--items js-buttonTel"
+                  href=""
+                  target="_blank"
+                  title="telephone"
+                  ><span class="fas fa-mobile-alt"></span
+                ></a>
+                <a
+                  class="preview__card-socials--items js-buttonEm"
+                  href=""
+                  target="_blank"
+                  title="email"
+                  ><span class="far fa-envelope"></span
+                ></a>
+                <a
+                  class="preview__card-socials--items js-buttonLink"
+                  href=""
+                  target="_blank"
+                  title="linkedin"
+                  ><span class="fab fa-linkedin-in"></span
+                ></a>
+                <a
+                  class="preview__card-socials--items js-buttonGit"
+                  href=""
+                  target="_blank"
+                  title="github"
+                  ><span class="fab fa-github-alt"></span
+                ></a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+
+        <form
+          class="collapsable js-data"
+          action=""
+          method="POST"
+          autocomplete="on"
+        >
+          <div class="collapsable__header js-collapsable-header">
+            <i class="far fa-object-ungroup"></i>
+            <h2 class="collapsable__header--title">Diseña</h2>
+            <i class="fas fa-chevron-down js-arrow rotate"></i>
+          </div>
+
+          <section class="collapsable-design js-collapsable js-collapsable-design">
+            <div class="collapsable-design__colors">
+              <h3 class="collapsable-design__colors--title">colores</h3>
+              <div clas="collapsable-design__colors--palettes">
+                <label class="palette palette-radio label1" for="palette1">
+                  <input
+                    type="radio"
+                    class="radio-class js-paletteDefault"
+                    name="palette"
+                    id="palette1"
+                    value="1"
+                  />
+                  <ul class="palette__square palette-1">
+                    <li class="palette__square--color color-1"></li>
+                    <li class="palette__square--color color-2"></li>
+                    <li class="palette__square--color color-3"></li>
+                  </ul>
+                </label>
+
+                <label class="palette palette-radio label2" for="palette2">
+                  <input
+                    type="radio"
+                    class="radio-class"
+                    name="palette"
+                    id="palette2"
+                    value="2"
+                  />
+                  <ul class="palette__square palette-2">
+                    <li class="palette__square--color color-1"></li>
+                    <li class="palette__square--color color-2"></li>
+                    <li class="palette__square--color color-3"></li>
+                  </ul>
+                </label>
+
+                <label class="palette palette-radio label3" for="palette3">
+                  <input
+                    type="radio"
+                    class="radio-class"
+                    name="palette"
+                    id="palette3"
+                    value="3"
+                  />
+                  <ul class="palette__square palette-3">
+                    <li class="palette__square--color color-1"></li>
+                    <li class="palette__square--color color-2"></li>
+                    <li class="palette__square--color color-3"></li>
+                  </ul>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <div class="border"></div>
+          <div class="collapsable__header js-collapsable-header">
+            <i class="far fa-keyboard keyBoard"></i>
+            <h2 class="collapsable__header--title">Rellena</h2>
+            <i class="fas fa-chevron-down js-arrow "></i>
+          </div>
+
+          <section
+            class="collapsable-fill js-collapsable js-collapsable-fill collapsable-hidden"
+          >
+            <div class="collapsable-fill__content">
+              <label class="label" for="name">nombre completo *</label>
+              <input
+                class="input js-nameInput"
+                id="name"
+                maxlength="19"
+                type="text"
+                name="name"
+                placeholder="Ej: Sally Jill"
+                required
+              />
+              <label class="label" for="job">puesto *</label>
+              <input
+                class="input js-job"
+                id="job"
+                maxlength="22"
+                type="text"
+                name="job"
+                placeholder="Ej: Front-end unicorn"
+                required
+              />
+              <label class="label" for="image">imagen de perfil *</label>
+              <div class="collapsable-fill__content--buttonPreview">
+                <label class="button" for="img-selector">Añadir imagen</label>
+                <input
+                  type="file"
+                  name=""
+                  id="img-selector"
+                  class="action__hiddenField js__profile-upload-btn"
+                  required
+                />
+                <div class="square js__profile-preview"></div>
+              </div>
+              <label class="label" for="email">email *</label>
+              <input
+                class="input js-email"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Ej: sally-hill@gmail.com"
+                value
+                required
+              />
+              <label class="label" for="telephone">teléfono *</label>
+              <input
+                class="input js-telephone"
+                id="telephone"
+                type="tel"
+                name="phone"
+                placeholder="Ej: 123456789"
+                value
+                required
+              />
+              <label class="label" for="linkedin">linkedin *</label>
+              <input
+                class="input js-linkedin"
+                id="linkedin"
+                type="text"
+                name="linkedin"
+                placeholder="Ej: sally.hill"
+                value
+                required
+              />
+              <label class="label" for="github">github *</label>
+              <input
+                class="input js-github"
+                id="github"
+                type="text"
+                name="github"
+                placeholder="Ej: sally-hill"
+                value
+                required
+              />
+            </div>
+          </section>
+
+          <div class="border"></div>
+          <div class="collapsable__header js-collapsable-header">
+            <i class="fas fa-share-alt"></i>
+            <h2 class="collapsable__header--title">Comparte</h2>
+            <i class="fas fa-chevron-down js-arrow "></i>
+          </div>
+
+          <section
+            class="
+              collapsable-share
+              js-collapsable js-collapsable-share
+              collapsable-hidden
+            "
+          >
+            <button class="collapsable-share__button js-button-create">
+              <i class="far fa-address-card" aria-hidden="true"></i>
+              <span class="collapsable-share__button--text">crear tarjeta</span>
+            </button>
+
+            <div class="collapsable-share__twitter js-sectionCreated collapsable-hidden">
+              <h3 class="collapsable-share__twitter--title">Tu tarjeta ha sido creada</h3>
+              <p class="message-share">Haz click en el enlace para ver tu tarjeta:</p>
+              <a
+                class="collapsable-share__twitter--link js-link-create"
+                target="_blank"
+                href=""
+              ></a>
+              <a
+                href=""
+                target="_blank"
+                class="collapsable-share__twitter--button js-twitter-button"
+              >
+                <i class="fab fa-twitter" aria-hidden="true"></i>Compartir en twitter
+              </a>
+            </div>
+            <div
+              class="collapsable-share__twitter js-sectionCreatedError collapsable-hidden"
+            >
+              <h3 class="collapsable-share__twitter--title">
+                Completa todos los campos marcados con * :
+              </h3>
+              <p class="collapsable-share__twitter--link js-message-error"></p>
+            </div>
+          </section>
+
+          <div class="border"></div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+        <small class="footer__info"> Awesome profile-cards &#169 2021
+        </small>
+        <img class="footer__logo" src="./assets/images/logo-adalab.png" alt="Logo Adalab">
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
