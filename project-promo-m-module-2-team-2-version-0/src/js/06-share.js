@@ -30,29 +30,29 @@ function handlerCreateCard(ev) {
       if (data.success === true) {
         linkCreate.innerHTML = data.cardURL;
         linkCreate.href = data.cardURL;
-        sectionCreate.classList.remove("collapsable-hidden");
-        errorCreate.classList.add("collapsable-hidden");
-        buttonCreate.classList.remove("button-share-click-error");
-        buttonCreate.classList.add("button-share-click");
+        sectionCreate.classNameList.remove("collapsable-hidden");
+        errorCreate.classNameList.add("collapsable-hidden");
+        buttonCreate.classNameList.remove("button-share-click-error");
+        buttonCreate.classNameList.add("button-share-click");
 
         buttonTwitter.href = `https://twitter.com/intent/tweet?text=${textTweet}&url=${data.cardURL}&hashtags=${hashtagsTweet}`;
 
         buttonCreate.setAttribute("disabled", "disabled");
       } else {
-        errorCreate.classList.remove("collapsable-hidden");
+        errorCreate.classNameList.remove("collapsable-hidden");
 
-        sectionCreate.classList.add("collapsable-hidden");
-        buttonCreate.classList.add("button-share-click-error");
+        sectionCreate.classNameList.add("collapsable-hidden");
+        buttonCreate.classNameList.add("button-share-click-error");
       }
     });
 }
 
 function allowButton() {
   buttonCreate.removeAttribute("disabled", "disabled");
-  errorCreate.classList.add("collapsable-hidden");
-  sectionCreate.classList.add("collapsable-hidden");
-  buttonCreate.classList.remove("button-share-click-error");
-  buttonCreate.classList.remove("button-share-click");
+  errorCreate.classNameList.add("collapsable-hidden");
+  sectionCreate.classNameList.add("collapsable-hidden");
+  buttonCreate.classNameList.remove("button-share-click-error");
+  buttonCreate.classNameList.remove("button-share-click");
 }
 
 buttonCreate.addEventListener("click", handlerCreateCard);

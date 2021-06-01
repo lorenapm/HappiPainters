@@ -12,16 +12,16 @@ function handleCollapsibles(event) {
   const headerClick = event.currentTarget;
   for (const collapsableSection of collapsableSections) {
     if (collapsableSection === sectionClick) {
-      collapsableSection.classList.toggle("collapsable-hidden");
+      collapsableSection.classNameList.toggle("collapsable-hidden");
       for (const arrow of arrows) {
         if (arrow.parentNode === headerClick) {
-          arrow.classList.toggle("rotate");
+          arrow.classNameList.toggle("rotate");
         } else {
-          arrow.classList.remove("rotate");
+          arrow.classNameList.remove("rotate");
         }
       }
     } else {
-      collapsableSection.classList.add("collapsable-hidden");
+      collapsableSection.classNameList.add("collapsable-hidden");
     }
   }
 }
