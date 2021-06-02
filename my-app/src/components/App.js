@@ -21,7 +21,9 @@ function App() {
               </button>
               <section className="preview__card">
                 <div className="preview__card-data">
-                  <h2 className="preview__card-data--name js-name"></h2>
+                  <h2 className="preview__card-data--name js-name">
+                    Nombre Apellido
+                  </h2>
                   <h3 className="preview__card-data--jobTitle js-jobTitle">
                     Front-end developer
                   </h3>
