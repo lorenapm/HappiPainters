@@ -4646,16 +4646,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAwEv9H1IUeVPBVQfbAAAAAElFTkSuQmCC" transform="matrix(0.24 0 0 0.24 144.8804 280.92)">
 		</image>
 		<g>
-			<rect x="152.9" y="289" className="st0" width="869" height="1277.3"/>
+			<rect x="152.9" y="289" class="st0" width="869" height="1277.3"/>
 		</g>
 	</g>
 </g>
-<path className="st1" d="M474.7,695.7"/>
-<rect x="-0.5" y="-0.3" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 424.7638 695.3521)" className="st2" width="425.8" height="696"/>
-<polygon className="st3" points="1192.2,1652.2 854.9,1312.6 855.4,1652.2 "/>
-<circle className="st4" cx="279.4" cy="870.5" r="124.8"/>
-<path className="st5" d="M448.5,1396.8h-351v-339.7h51c165.7,0,300,134.3,300,300V1396.8z"/>
-<polygon className="st6" points="404.2,1113.8 791.2,1113.8 791.2,1511.4 "/>
-<rect x="649.5" y="652.2" className="st7" width="424.8" height="436.6"/>
-<circle className="st8" cx="854.9" cy="385" r="205.4"/>
+<path class="st1" d="M474.7,695.7"/>
+<rect x="-0.5" y="-0.3" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 424.7638 695.3521)" class="st2" width="425.8" height="696"/>
+<polygon class="st3" points="1192.2,1652.2 854.9,1312.6 855.4,1652.2 "/>
+<circle class="st4" cx="279.4" cy="870.5" r="124.8"/>
+<path class="st5" d="M448.5,1396.8h-351v-339.7h51c165.7,0,300,134.3,300,300V1396.8z"/>
+<polygon class="st6" points="404.2,1113.8 791.2,1113.8 791.2,1511.4 "/>
+<rect x="649.5" y="652.2" class="st7" width="424.8" height="436.6"/>
+<circle class="st8" cx="854.9" cy="385" r="205.4"/>
 </svg>
