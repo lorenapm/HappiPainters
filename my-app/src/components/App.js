@@ -130,7 +130,7 @@ function App() {
               <i className="fas fa-chevron-down js-arrow "></i>
             </div>
 
-            <section className="collapsable-fill js-collapsable js-collapsable-fill collapsable-hidden">
+            <section className="collapsable-fill js-collapsable js-collapsable-fill">
               <div className="collapsable-fill__content">
                 <label className="label">nombre completo *</label>
                 <input
@@ -212,7 +212,7 @@ function App() {
               className="
               collapsable-share
               js-collapsable js-collapsable-share
-              collapsable-hidden
+      
             "
             >
               <button className="collapsable-share__button js-button-create">
@@ -222,7 +222,7 @@ function App() {
                 </span>
               </button>
 
-              <div className="collapsable-share__twitter js-sectionCreated collapsable-hidden">
+              <div className="collapsable-share__twitter js-sectionCreated">
                 <h3 className="collapsable-share__twitter--title">
                   Tu tarjeta ha sido creada
                 </h3>
@@ -243,7 +243,7 @@ function App() {
                   en twitter
                 </a>
               </div>
-              <div className="collapsable-share__twitter js-sectionCreatedError collapsable-hidden">
+              <div className="collapsable-share__twitter js-sectionCreatedError">
                 <h3 className="collapsable-share__twitter--title">
                   Completa todos los campos marcados con * :
                 </h3>
