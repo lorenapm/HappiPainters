@@ -7,13 +7,20 @@ import Share from "./Share";
 function Form() {
   return (
     <form className="collapsable js-data" action="" method="POST">
-      <Collapsable />
+      <Collapsable 
+      title="Diseña"
+      icon="far fa-object-ungroup"
+      />
       <Design />
       <div className="border"></div>
-      <Collapsable />
+      <Collapsable 
+      title="Rellena"
+      icon="far fa-keyboard"/>
       <Fill />
       <div className="border"></div>
-      <Collapsable />
+      <Collapsable 
+      title="Comparte"
+      icon="fas fa-share-alt"/>
       <Share />
 
       <div className="border"></div>
