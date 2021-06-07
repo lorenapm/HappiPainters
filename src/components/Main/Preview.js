@@ -1,6 +1,6 @@
 import React from "react";
 
-function Preview() {
+function Preview(props) {
   return (
     <section className="preview">
       <div className="preview__container">
@@ -8,20 +8,20 @@ function Preview() {
           <span className="far fa-trash-alt"></span>
           <span>Reset</span>
         </button>
-        <section className="preview__card">
+        <section
+          className={`preview__card palcol${props.palette} pal${props.palette}`}
+        >
           <div className="preview__card-data">
-            <h2 className="preview__card-data--name js-name">
-              Nombre Apellido
-            </h2>
+            <h2 className="preview__card-data--name js-name">{props.name}</h2>
             <h3 className="preview__card-data--jobTitle js-jobTitle">
-              Front-end developer
+              {props.job}
             </h3>
           </div>
           <div className="preview__card-image js__profile-image"></div>
           <div className="preview__card-socials">
             <a
               className="preview__card-socials--items js-buttonTel"
-              href=""
+              href={`tel:${props.phone}`}
               target="_blank"
               title="telephone"
             >
@@ -29,7 +29,7 @@ function Preview() {
             </a>
             <a
               className="preview__card-socials--items js-buttonEm"
-              href=""
+              href={`mailto:${props.email}`}
               target="_blank"
               title="email"
             >
@@ -37,7 +37,7 @@ function Preview() {
             </a>
             <a
               className="preview__card-socials--items js-buttonLink"
-              href=""
+              href={`https://www.linkedin.com/in/${props.linkedin}`}
               target="_blank"
               title="linkedin"
             >
@@ -45,7 +45,7 @@ function Preview() {
             </a>
             <a
               className="preview__card-socials--items js-buttonGit"
-              href=""
+              href={`https://github.com/${props.github}`}
               target="_blank"
               title="github"
             >

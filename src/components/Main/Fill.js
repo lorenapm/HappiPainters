@@ -1,11 +1,12 @@
 import React from "react";
 import Input from "./Input";
 
-function Fill() {
+function Fill(props) {
   return (
     <section className="collapsable-fill js-collapsable js-collapsable-fill">
       <div className="collapsable-fill__content">
         <Input
+          handleInput={props.handleInput}
           labelText="Nombre completo *"
           fillClass="js-nameInput"
           id="name"
@@ -15,6 +16,7 @@ function Fill() {
           maxLength="19"
         />
         <Input
+          handleInput={props.handleInput}
           labelText="Puesto *"
           fillClass="js-job"
           id="job"
@@ -28,6 +30,7 @@ function Fill() {
         <div className="collapsable-fill__content--buttonPreview">
           <label className="button">Añadir imagen</label>
           <input
+            handleInput={props.handleInput}
             type="file"
             name=""
             id="img-selector"
@@ -37,6 +40,7 @@ function Fill() {
           <div className="square js__profile-preview"></div>
         </div>
         <Input
+          handleInput={props.handleInput}
           labelText="email *"
           fillClass="js-email"
           id="email"
@@ -45,6 +49,7 @@ function Fill() {
           placeholder="Ej: sally-hill@gmail.com"
         />
         <Input
+          handleInput={props.handleInput}
           labelText="Teléfono *"
           fillClass="js-telephone"
           id="telephone"
@@ -53,6 +58,7 @@ function Fill() {
           placeholder="Ej: 123456789"
         />
         <Input
+          handleInput={props.handleInput}
           labelText="Linkedin *"
           fillClass="js-linkedin"
           id="linkedin"
@@ -62,6 +68,7 @@ function Fill() {
         />
 
         <Input
+          handleInput={props.handleInput}
           labelText="Github *"
           fillClass="js-github"
           id="github"

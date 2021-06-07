@@ -1,13 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import Preview from "./Preview";
 import Form from "./Form";
 
 function Main() {
+  const [palette, setPalette] = useState("1");
+  const [name, setName] = useState("Nombre Apellido");
+  const [job, setJob] = useState("Front-end developer");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [linkedin, setLinkedin] = useState("");
+  const [github, setGithub] = useState("");
+  const [photo, setPhoto] = useState("");
+
+  const handleInput = (inputName, inputValue) => {
+    if (inputName === "palette") {
+      setPalette(inputValue);
+    } else if (inputName === "name") {
+      setName(inputValue);
+    } else if (inputName === "job") {
+      setJob(inputValue);
+    } else if (inputName === "email") {
+      setEmail(inputValue);
+    } else if (inputName === "phone") {
+      setPhone(inputValue);
+    } else if (inputName === "linkedin") {
+      setLinkedin(inputValue);
+    } else if (inputName === "github") {
+      setGithub(inputValue);
+    }
+    console.log(palette);
+  };
+
   return (
     <main className="main">
       <div className="card-wrapper">
-        <Preview />
-        <Form />
+        <Preview
+          palette={palette}
+          name={name}
+          job={job}
+          email={email}
+          phone={phone}
+          linkedin={linkedin}
+          github={github}
+        />
+        <Form handleInput={handleInput} />
       </div>
     </main>
   );
