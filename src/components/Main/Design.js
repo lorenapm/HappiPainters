@@ -1,4 +1,5 @@
 import React from "react";
+import Palette from "./Palette";
 
 function Design() {
   return (
@@ -6,47 +7,24 @@ function Design() {
       <div className="collapsable-design__colors">
         <h3 className="collapsable-design__colors--title">colores</h3>
         <div clas="collapsable-design__colors--palettes">
-          <label className="palette palette-radio label1">
-            <input
-              type="radio"
-              className="radio-className js-paletteDefault"
-              name="palette"
-              id="palette1"
-            />
-            <ul className="palette__square palette-1">
-              <li className="palette__square--color color-1"></li>
-              <li className="palette__square--color color-2"></li>
-              <li className="palette__square--color color-3"></li>
-            </ul>
-          </label>
-
-          <label className="palette palette-radio label2">
-            <input
-              type="radio"
-              className="radio-className"
-              name="palette"
-              id="palette2"
-            />
-            <ul className="palette__square palette-2">
-              <li className="palette__square--color color-1"></li>
-              <li className="palette__square--color color-2"></li>
-              <li className="palette__square--color color-3"></li>
-            </ul>
-          </label>
-
-          <label className="palette palette-radio label3">
-            <input
-              type="radio"
-              className="radio-className"
-              name="palette"
-              id="palette3"
-            />
-            <ul className="palette__square palette-3">
-              <li className="palette__square--color color-1"></li>
-              <li className="palette__square--color color-2"></li>
-              <li className="palette__square--color color-3"></li>
-            </ul>
-          </label>
+          <Palette
+            id="palette1"
+            paletteClass="palette-1"
+            value="1"
+            labelClass="label1"
+          />
+          <Palette
+            id="palette2"
+            paletteClass="palette-2"
+            value="2"
+            labelClass="label2"
+          />
+          <Palette
+            id="palette3"
+            paletteClass="palette-3"
+            value="3"
+            labelClass="label3"
+          />
         </div>
       </div>
     </section>
