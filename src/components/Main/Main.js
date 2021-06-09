@@ -4,8 +4,8 @@ import Form from "./Form";
 
 function Main() {
   const [palette, setPalette] = useState("1");
-  const [name, setName] = useState("Nombre Apellido");
-  const [job, setJob] = useState("Front-end developer");
+  const [name, setName] = useState("");
+  const [job, setJob] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");

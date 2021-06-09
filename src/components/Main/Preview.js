@@ -2,6 +2,9 @@ import React from "react";
 import Reset from "./Reset";
 
 function Preview(props) {
+  const namePreview = props.name === "" ? "Nombre Apellido" : props.name;
+  const jobPreview = props.job === "" ? "Front-end developer" : props.job;
+
   return (
     <section className="preview">
       <div className="preview__container">
@@ -11,9 +14,9 @@ function Preview(props) {
           className={`preview__card palcol${props.palette} pal${props.palette}`}
         >
           <div className="preview__card-data">
-            <h2 className="preview__card-data--name js-name">{props.name}</h2>
+            <h2 className="preview__card-data--name js-name">{namePreview}</h2>
             <h3 className="preview__card-data--jobTitle js-jobTitle">
-              {props.job}
+              {jobPreview}
             </h3>
           </div>
           <div className="preview__card-image js__profile-image"></div>
