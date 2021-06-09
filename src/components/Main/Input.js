@@ -19,6 +19,7 @@ function Input(props) {
         placeholder={props.placeholder}
         maxlength={props.maxLength}
         required
+        value={props.value}
       />
     </>
   );

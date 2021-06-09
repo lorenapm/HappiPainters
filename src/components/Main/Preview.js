@@ -5,7 +5,7 @@ function Preview(props) {
   return (
     <section className="preview">
       <div className="preview__container">
-        <Reset />
+        <Reset handleReset={props.handleReset} />
 
         <section
           className={`preview__card palcol${props.palette} pal${props.palette}`}

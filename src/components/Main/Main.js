@@ -29,7 +29,16 @@ function Main() {
     } else if (inputName === "github") {
       setGithub(inputValue);
     }
-    console.log(palette);
+  };
+
+  const handleReset = () => {
+    setPalette("1");
+    setName("");
+    setJob("");
+    setEmail("");
+    setPhone("");
+    setLinkedin("");
+    setGithub("");
   };
 
   return (
@@ -43,8 +52,18 @@ function Main() {
           phone={phone}
           linkedin={linkedin}
           github={github}
+          handleReset={handleReset}
         />
-        <Form handleInput={handleInput} palette={palette} />
+        <Form
+          handleInput={handleInput}
+          palette={palette}
+          name={name}
+          job={job}
+          email={email}
+          phone={phone}
+          linkedin={linkedin}
+          github={github}
+        />
       </div>
     </main>
   );

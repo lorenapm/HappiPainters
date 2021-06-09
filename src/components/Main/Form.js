@@ -20,7 +20,15 @@ function Form(props) {
         icon="far fa-keyboard"
         handleInput={props.handleInput}
       >
-        <Fill handleInput={props.handleInput} />
+        <Fill
+          handleInput={props.handleInput}
+          name={props.name}
+          job={props.job}
+          email={props.email}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+        />
       </Collapsable>
       <div className="border"></div>
       <Collapsable
