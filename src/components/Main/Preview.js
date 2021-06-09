@@ -1,13 +1,12 @@
 import React from "react";
+import Reset from "./Reset";
 
 function Preview(props) {
   return (
     <section className="preview">
       <div className="preview__container">
-        <button type="reset" className="preview__reset js-reset">
-          <span className="far fa-trash-alt"></span>
-          <span>Reset</span>
-        </button>
+        <Reset />
+
         <section
           className={`preview__card palcol${props.palette} pal${props.palette}`}
         >
