@@ -6,6 +6,7 @@ function Fill(props) {
     <section className="collapsable-fill js-collapsable js-collapsable-fill">
       <div className="collapsable-fill__content">
         <Input
+          value={props.name}
           handleInput={props.handleInput}
           labelText="Nombre completo *"
           fillClass="js-nameInput"
@@ -16,6 +17,7 @@ function Fill(props) {
           maxLength="19"
         />
         <Input
+          value={props.job}
           handleInput={props.handleInput}
           labelText="Puesto *"
           fillClass="js-job"
@@ -40,6 +42,7 @@ function Fill(props) {
           <div className="square js__profile-preview"></div>
         </div>
         <Input
+          value={props.email}
           handleInput={props.handleInput}
           labelText="email *"
           fillClass="js-email"
@@ -49,6 +52,7 @@ function Fill(props) {
           placeholder="Ej: sally-hill@gmail.com"
         />
         <Input
+          value={props.phone}
           handleInput={props.handleInput}
           labelText="Teléfono *"
           fillClass="js-telephone"
@@ -58,6 +62,7 @@ function Fill(props) {
           placeholder="Ej: 123456789"
         />
         <Input
+          value={props.linkedin}
           handleInput={props.handleInput}
           labelText="Linkedin *"
           fillClass="js-linkedin"
@@ -68,6 +73,7 @@ function Fill(props) {
         />
 
         <Input
+          value={props.github}
           handleInput={props.handleInput}
           labelText="Github *"
           fillClass="js-github"

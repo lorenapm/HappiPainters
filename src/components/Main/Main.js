@@ -13,6 +13,7 @@ function Main() {
   const [photo, setPhoto] = useState("");
 
   const handleInput = (inputName, inputValue) => {
+    console.log(inputName);
     if (inputName === "palette") {
       setPalette(inputValue);
     } else if (inputName === "name") {
@@ -43,7 +44,7 @@ function Main() {
           linkedin={linkedin}
           github={github}
         />
-        <Form handleInput={handleInput} />
+        <Form handleInput={handleInput} palette={palette} />
       </div>
     </main>
   );

@@ -13,6 +13,7 @@ function Design(props) {
             paletteClass="palette-1"
             value="1"
             labelClass="label1"
+            checked={props.palette === "1"}
           />
           <Palette
             handleInput={props.handleInput}
@@ -20,6 +21,7 @@ function Design(props) {
             paletteClass="palette-2"
             value="2"
             labelClass="label2"
+            checked={props.palette === "2"}
           />
           <Palette
             handleInput={props.handleInput}
@@ -27,6 +29,7 @@ function Design(props) {
             paletteClass="palette-3"
             value="3"
             labelClass="label3"
+            checked={props.palette === "3"}
           />
         </div>
       </div>

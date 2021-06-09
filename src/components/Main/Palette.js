@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 function Palette(props) {
-  const handleInput = () => {
-    props.handleInput(props.id, props.value);
+  const handleInput = (ev) => {
+    props.handleInput(ev.currentTarget.name, props.value);
   };
   return (
     <label
-      for={props.id}
+      forHtml={props.id}
       className={`palette palette-radio ${props.labelClass}`}
     >
       <input

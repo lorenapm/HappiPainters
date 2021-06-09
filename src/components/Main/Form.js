@@ -12,7 +12,7 @@ function Form(props) {
         icon="far fa-object-ungroup"
         handleInput={props.handleInput}
       >
-        <Design handleInput={props.handleInput} />
+        <Design handleInput={props.handleInput} palette={props.palette} />
       </Collapsable>
       <div className="border"></div>
       <Collapsable
