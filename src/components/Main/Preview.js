@@ -1,9 +1,11 @@
 import React from "react";
 import Reset from "./Reset";
+import defaultAvatar from "../../images/card-pic.jpg";
 
 function Preview(props) {
   const namePreview = props.name === "" ? "Nombre Apellido" : props.name;
   const jobPreview = props.job === "" ? "Front-end developer" : props.job;
+  const photo = props.photo === '' ? defaultAvatar : props.photo;
 
   return (
     <section className="preview">
@@ -21,7 +23,7 @@ function Preview(props) {
           </div>
           <div
             className="preview__card-image js__profile-image"
-            style={{ backgroundImage: `url(${props.photo})` }}
+            style={{ backgroundImage: `url(${photo})` }}
           ></div>
           <div className="preview__card-socials">
             <a

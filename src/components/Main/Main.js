@@ -42,6 +42,7 @@ function Main() {
     setPhone("");
     setLinkedin("");
     setGithub("");
+    setPhoto("");
   };
 
   return (
