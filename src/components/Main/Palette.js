@@ -16,6 +16,8 @@ function Palette(props) {
         name="palette"
         id={props.id}
         value={props.value}
+        palette={props.palette}
+        checked={props.checked}
       />
       <ul className={`palette__square palette-1 ${props.paletteClass}`}>
         <li className="palette__square--color color-1"></li>
