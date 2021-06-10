@@ -56,6 +56,7 @@ function Main() {
           linkedin={linkedin}
           github={github}
           handleReset={handleReset}
+          photo={photo}
         />
         <Form
           updateAvatar={updateAvatar}

@@ -21,6 +21,7 @@ function Form(props) {
           phone={props.phone}
           linkedin={props.linkedin}
           github={props.github}
+          photo={props.photo}
         />
       </Collapsable>
       <div className="border"></div>

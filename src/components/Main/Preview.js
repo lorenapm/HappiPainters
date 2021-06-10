@@ -19,7 +19,10 @@ function Preview(props) {
               {jobPreview}
             </h3>
           </div>
-          <div className="preview__card-image js__profile-image"></div>
+          <div
+            className="preview__card-image js__profile-image"
+            style={{ backgroundImage: `url(${props.photo})` }}
+          ></div>
           <div className="preview__card-socials">
             <a
               className="preview__card-socials--items js-buttonTel"
