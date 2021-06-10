@@ -31,7 +31,7 @@ function Fill(props) {
         />
         <label className="label"></label>
         <div className="collapsable-fill__content--buttonPreview">
-          <label className="button">Añadir imagen</label>
+          {/* <label className="button">Añadir imagen</label> */}
           {/* <input
             //handleInput={props.handleInput}
             type="file"
@@ -41,7 +41,7 @@ function Fill(props) {
             required
           /> */}
           <GetAvatar avatar={props.photo} updateAvatar={props.updateAvatar} />
-          <div className="square js__profile-preview"></div>
+          
         </div>
         <Input
           value={props.email}

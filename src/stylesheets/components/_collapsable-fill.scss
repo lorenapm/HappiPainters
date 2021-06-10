@@ -31,34 +31,43 @@
       flex-direction: row;
       justify-content: flex-start;
       margin-bottom: 20px;
-      .button {
-        display: block;
-        width: 140px;
-        height: 30px;
-        padding: 5px;
-        background-color: $colorTomato;
-        border: none;
-        border-radius: 3px;
-        font-family: $fontOpenSans;
-        color: $colorWhite;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-        cursor: pointer;
-      }
-      .action__hiddenField {
-        display: none;
-      }
-      .square {
-        background-size: cover;
-        background-position: center center;
-        display: inline-block;
-        margin-left: 20px;
-        width: 30px;
-        height: 30px;
-        border: 1px solid $colorHospitalGreen;
-      }
     }
   }
+}
+
+// ----------------------------------------
+.get-avatar {
+  display: flex;
+}
+
+.get-avatar__label {
+  display: block;
+  width: 140px;
+  height: 30px;
+  padding: 5px;
+  background-color: $colorTomato;
+  border: none;
+  border-radius: 3px;
+  font-family: $fontOpenSans;
+  color: $colorWhite;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  cursor: pointer;
+}
+
+.get-avatar__upload-field {
+  display: none;
+}
+
+.get-avatar__preview {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid $colorHospitalGreen;
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
 }
