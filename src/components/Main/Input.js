@@ -2,12 +2,12 @@ import React from "react";
 
 function Input(props) {
   const handleInput = (ev) => {
-    props.handleInput(props.name, ev.target.value);
+    props.handleInput(props.name, ev.currentTarget.value);
   };
 
   return (
     <>
-      <label for={props.id} className="label">
+      <label htmlFor={props.id} className="label">
         {props.labelText}
       </label>
       <input
@@ -17,7 +17,7 @@ function Input(props) {
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
-        maxlength={props.maxLength}
+        maxLength={props.maxLength}
         required
         value={props.value}
       />

@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./Input";
+import GetAvatar from "../Main/GetAvatar";
 
 function Fill(props) {
   return (
@@ -31,14 +32,15 @@ function Fill(props) {
         <label className="label"></label>
         <div className="collapsable-fill__content--buttonPreview">
           <label className="button">Añadir imagen</label>
-          <input
-            handleInput={props.handleInput}
+          {/* <input
+            //handleInput={props.handleInput}
             type="file"
             name=""
             id="img-selector"
             className="action__hiddenField js__profile-upload-btn"
             required
-          />
+          /> */}
+          <GetAvatar avatar={props.photo} updateAvatar={props.updateAvatar} />
           <div className="square js__profile-preview"></div>
         </div>
         <Input

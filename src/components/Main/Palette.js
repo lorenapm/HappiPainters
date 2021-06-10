@@ -6,7 +6,7 @@ function Palette(props) {
   };
   return (
     <label
-      forHtml={props.id}
+      htmlFor={props.id}
       className={`palette palette-radio ${props.labelClass}`}
     >
       <input

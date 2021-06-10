@@ -13,7 +13,6 @@ function Main() {
   const [photo, setPhoto] = useState("");
 
   const handleInput = (inputName, inputValue) => {
-    console.log(inputName);
     if (inputName === "palette") {
       setPalette(inputValue);
     } else if (inputName === "name") {
@@ -29,6 +28,10 @@ function Main() {
     } else if (inputName === "github") {
       setGithub(inputValue);
     }
+  };
+
+  const updateAvatar = (avatar) => {
+    setPhoto(avatar);
   };
 
   const handleReset = () => {
@@ -55,6 +58,7 @@ function Main() {
           handleReset={handleReset}
         />
         <Form
+          updateAvatar={updateAvatar}
           handleInput={handleInput}
           palette={palette}
           name={name}
@@ -63,6 +67,7 @@ function Main() {
           phone={phone}
           linkedin={linkedin}
           github={github}
+          photo={photo}
         />
       </div>
     </main>

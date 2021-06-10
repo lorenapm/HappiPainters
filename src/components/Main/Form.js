@@ -6,21 +6,14 @@ import Share from "./Share";
 
 function Form(props) {
   return (
-    <form className="collapsable js-data" action="" method="POST">
-      <Collapsable
-        title="Diseña"
-        icon="far fa-object-ungroup"
-        handleInput={props.handleInput}
-      >
+    <form className="collapsable js-data">
+      <Collapsable title="Diseña" icon="far fa-object-ungroup">
         <Design handleInput={props.handleInput} palette={props.palette} />
       </Collapsable>
       <div className="border"></div>
-      <Collapsable
-        title="Rellena"
-        icon="far fa-keyboard"
-        handleInput={props.handleInput}
-      >
+      <Collapsable title="Rellena" icon="far fa-keyboard">
         <Fill
+          updateAvatar={props.updateAvatar}
           handleInput={props.handleInput}
           name={props.name}
           job={props.job}
@@ -31,11 +24,7 @@ function Form(props) {
         />
       </Collapsable>
       <div className="border"></div>
-      <Collapsable
-        title="Comparte"
-        icon="fas fa-share-alt"
-        handleInput={props.handleInput}
-      >
+      <Collapsable title="Comparte" icon="fas fa-share-alt">
         <Share />
       </Collapsable>
       <div className="border"></div>
