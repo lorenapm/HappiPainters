@@ -4,14 +4,15 @@ import Form from "./Form";
 import ls from "../../services/localStorage";
 
 function Main() {
-  const [palette, setPalette] = useState("1");
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
-  const [photo, setPhoto] = useState("");
+  const localStorageData = ls.get("data") || {};
+  const [palette, setPalette] = useState(localStorageData.palette || "1");
+  const [name, setName] = useState(localStorageData.name || "");
+  const [job, setJob] = useState(localStorageData.job || "");
+  const [email, setEmail] = useState(localStorageData.email || "");
+  const [phone, setPhone] = useState(localStorageData.phone || "");
+  const [linkedin, setLinkedin] = useState(localStorageData.linkedin || "");
+  const [github, setGithub] = useState(localStorageData.github || "");
+  const [photo, setPhoto] = useState(localStorageData.photo || "");
 
   const data = {
     palette: palette,
@@ -27,14 +28,6 @@ function Main() {
   useEffect(() => {
     ls.set("data", data);
   }, [data]);
-
-  // useEffect(() => {
-  //   const data = ls.get("data");
-  //   if (data) {
-  //     setName(data);
-  //     console.log(data);
-  //   }
-  // }, []);
 
   const handleInput = (inputName, inputValue) => {
     if (inputName === "palette") {
