@@ -1,15 +1,17 @@
 import "../stylesheets/App.scss";
-import Header from "./Header";
-import Main from "../components/Main/Main";
-import Footer from "./Footer";
+import AppLanding from "./AppLanding";
+import Card from "./Card";
+import { Route, Switch } from "react-router-dom";
+
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+        <Switch>
+          <Route exact path="/" component={AppLanding} />
+          <Route path="/card" component={Card} />
+        </Switch>
+      </>
   );
 }
 

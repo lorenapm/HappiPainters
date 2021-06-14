@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function MainLanding() {
   return (
@@ -27,9 +28,14 @@ function MainLanding() {
         </ul>
       </section>
       <div className="landing__main-button">
-        <a className="landing__main-button--start" href="./card.html">
-          Comenzar
-        </a>
+        <Link
+            to="/card"
+            className="landing__main-button--start"
+            title="Go to create card"
+            tabindex="1"
+          >
+            Comenzar
+          </Link>
       </div>
     </main>
   );
