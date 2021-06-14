@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Preview from "./Preview";
 import Form from "./Form";
+import ls from "../../services/localStorage";
 
 function Main() {
   const [palette, setPalette] = useState("1");
@@ -11,6 +12,29 @@ function Main() {
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
   const [photo, setPhoto] = useState("");
+
+  const data = {
+    palette: palette,
+    name: name,
+    job: job,
+    email: email,
+    phone: phone,
+    linkedin: linkedin,
+    github: github,
+    photo: photo,
+  };
+
+  useEffect(() => {
+    ls.set("data", data);
+  }, [data]);
+
+  // useEffect(() => {
+  //   const data = ls.get("data");
+  //   if (data) {
+  //     setName(data);
+  //     console.log(data);
+  //   }
+  // }, []);
 
   const handleInput = (inputName, inputValue) => {
     if (inputName === "palette") {
