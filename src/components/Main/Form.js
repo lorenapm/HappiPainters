@@ -26,7 +26,7 @@ function Form(props) {
       </Collapsable>
       <div className="border"></div>
       <Collapsable title="Comparte" icon="fas fa-share-alt">
-        <Share />
+        <Share data={props.data} />
       </Collapsable>
       <div className="border"></div>
     </form>

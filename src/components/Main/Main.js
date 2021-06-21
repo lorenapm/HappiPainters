@@ -87,6 +87,7 @@ function Main() {
           linkedin={linkedin}
           github={github}
           photo={photo}
+          data={data}
         />
       </div>
     </main>
