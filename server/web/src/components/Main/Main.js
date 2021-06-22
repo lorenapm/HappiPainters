@@ -62,7 +62,7 @@ function Main() {
       if (data.success === true) {
         setUrl(data.cardURL);
       } else {
-        setError("Error");
+        setError(data.error);
       }
     });
   };
