@@ -1,5 +1,5 @@
 const sendDataToApi = (data) => {
-  const url = "https://awesome-profile-cards.herokuapp.com/card";
+  const url = "http://localhost:3000/card";
   return fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
