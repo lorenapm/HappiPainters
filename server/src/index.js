@@ -11,6 +11,10 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+//static server
+const serverStaticPath = './public';
+server.use(express.static(serverStaticPath));
+
 server.get("/card/:id", (req, res) => {
   // implementar luego
 });
