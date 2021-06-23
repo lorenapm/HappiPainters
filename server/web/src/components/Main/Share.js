@@ -42,9 +42,7 @@ function Share(props) {
 
       {props.error !== "" ? (
         <div className="collapsable-share__twitter js-sectionCreatedError">
-          <h3 className="collapsable-share__twitter--title">
-            Completa todos los campos marcados con * :
-          </h3>
+          <h3 className="collapsable-share__twitter--title">{props.error}</h3>
           <p className="collapsable-share__twitter--link js-message-error"></p>
         </div>
       ) : null}
