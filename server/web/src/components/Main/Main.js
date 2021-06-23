@@ -59,10 +59,10 @@ function Main() {
   const handleShare = (ev) => {
     ev.preventDefault();
     sendDataToApi(data).then((data) => {
-      if (data.success === true) {
-        setUrl(data.cardURL);
+      if (data.response.success === true) {
+        setUrl(data.response.cardURL);
       } else {
-        setError(data.error);
+        setError(data.response.error);
       }
     });
   };

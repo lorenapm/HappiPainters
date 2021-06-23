@@ -4,7 +4,7 @@ const cors = require("cors");
 const server = express();
 
 server.use(cors());
-server.use(express.json());
+server.use(express.json({ limit: '10Mb' }));
 
 const serverPort = 3000;
 server.listen(serverPort, () => {
@@ -18,7 +18,6 @@ server.get("/card/:id", (req, res) => {
 server.post("/card", (req, res) => {
   const response = {};
   // Recoger los datos desde React
-  console.log(req.body);
   if (req.body.name === "") {
     response.success = false;
     response.error = "No olvides rellenar el campo Nombre";
@@ -48,9 +47,6 @@ server.post("/card", (req, res) => {
   }
   res.json({ response });
 
-  /*
-  
-  */
 });
 
 server.get("*", (req, res) => {
