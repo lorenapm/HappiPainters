@@ -20,9 +20,7 @@ server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
   const userId = req.params.id;
-  console.log(userId);
-  console.log(userData);
-  console.log(userData.palette);
+  
   if(userData){  
     const data = {};
     data.palette = userData.palette;
@@ -34,7 +32,6 @@ server.get("/card/:id", (req, res) => {
     data.github = userData.github;
     data.photo = userData.photo;
     res.render('pages/card', data);
-    console.log(data);
     
   }else {
     res.render('pages/card-not-found'); 
