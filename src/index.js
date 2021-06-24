@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+const userData = require('./data/data.json');
 
 const server = express();
 
 server.use(cors());
 server.use(express.json({ limit: '10Mb' }));
+// set template engine middlewares
+server.set('view engine', 'ejs');
 
 const serverPort = 3000;
 server.listen(serverPort, () => {
@@ -16,7 +19,26 @@ const serverStaticPath = './public';
 server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
-  // implementar luego
+  const userId = req.params.id;
+  console.log(userId);
+  console.log(userData);
+  console.log(userData.palette);
+  if(userData){  
+    const data = {};
+    data.palette = userData.palette;
+    data.name = userData.name;
+    data.job = userData.job;
+    data.email = userData.email;
+    data.phone = userData.phone;
+    data.linkedin = userData.linkedin;
+    data.github = userData.github;
+    data.photo = userData.photo;
+    res.render('pages/card', data);
+    console.log(data);
+    
+  }else {
+    res.render('pages/card-not-found'); 
+  }
 });
 
 server.post("/card", (req, res) => {
