@@ -61,8 +61,10 @@ function Main() {
     sendDataToApi(data).then((data) => {
       if (data.response.success === true) {
         setUrl(data.response.cardURL);
+        setError("");
       } else {
         setError(data.response.error);
+        setUrl("");
       }
     });
   };
