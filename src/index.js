@@ -1,15 +1,21 @@
 const express = require("express");
 const cors = require("cors");
 const userData = require('./data/data.json');
+const Database = require("better-sqlite3");
 
 const server = express();
 
 server.use(cors());
 server.use(express.json({ limit: '10Mb' }));
+
 // set template engine middlewares
 server.set('view engine', 'ejs');
 
-const serverPort = 3000;
+const db = new Database("./src/data/projectcards.db",{
+  verbose: console.log
+});
+
+const serverPort = process.env.PORT || 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -19,18 +25,12 @@ const serverStaticPath = './public';
 server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
-  const userId = req.params.id;
   
-  if(userData){  
-    const data = {};
-    data.palette = userData.palette;
-    data.name = userData.name;
-    data.job = userData.job;
-    data.email = userData.email;
-    data.phone = userData.phone;
-    data.linkedin = userData.linkedin;
-    data.github = userData.github;
-    data.photo = userData.photo;
+  const query = db.prepare(`SELECT * from card`);
+  const data = query.get();
+  
+  if(data){  
+    
     res.render('pages/card', data);
     
   }else {
