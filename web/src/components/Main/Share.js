@@ -29,7 +29,10 @@ function Share(props) {
           </a>
 
           <a
+            dir="ltr"
+            href={`https://twitter.com/intent/tweet?url=Conoce%20mi%20tarjeta%20de%20presentación%20${props.url}&hashtags=openToWork,frontend`}
             target="_blank"
+            role="link"
             className="collapsable-share__twitter--button js-twitter-button"
           >
             <i className="fab fa-twitter" aria-hidden="true"></i>Compartir en
