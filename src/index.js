@@ -75,8 +75,11 @@ server.post("/card", (req, res) => {
     );
 
     response.success = true;
-    response.cardURL = `http://localhost:3000/card/${result.lastInsertRowid}`;
-    // || `http://https://happi-painters.herokuapp.com/#/card/${result.lastInsertRowid}`
+    if( req.hostname === 'localhost' ) {
+      response.cardURL = `http://localhost:${serverPort}/card/${result.lastInsertRowid}`;
+    } else {
+      response.cardURL = `https://happi-painters.herokuapp.com/card/${result.lastInsertRowid}`;
+    }
   }
   res.json({ response });
 });
