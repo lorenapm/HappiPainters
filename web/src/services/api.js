@@ -1,5 +1,5 @@
 const sendDataToApi = (data) => {
-  const url = "http://localhost:3000/card";
+  const url = "/card/";
   return fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
