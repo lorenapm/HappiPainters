@@ -1,18 +1,18 @@
 const express = require("express");
 const cors = require("cors");
-const userData = require('./data/data.json');
+const userData = require("./data/data.json");
 const Database = require("better-sqlite3");
 
 const server = express();
 
 server.use(cors());
-server.use(express.json({ limit: '10Mb' }));
+server.use(express.json({ limit: "10Mb" }));
 
 // set template engine middlewares
-server.set('view engine', 'ejs');
+server.set("view engine", "ejs");
 
-const db = new Database("./src/data/projectcards.db",{
-  verbose: console.log
+const db = new Database("./src/data/projectcards.db", {
+  verbose: console.log,
 });
 
 const serverPort = process.env.PORT || 3000;
@@ -21,20 +21,17 @@ server.listen(serverPort, () => {
 });
 
 //static server
-const serverStaticPath = './public';
+const serverStaticPath = "./public";
 server.use(express.static(serverStaticPath));
 
 server.get("/card/:id", (req, res) => {
-  
-  const query = db.prepare(`SELECT * from card`);
-  const data = query.get();
-  
-  if(data){  
-    
-    res.render('pages/card', data);
-    
-  }else {
-    res.render('pages/card-not-found'); 
+  const query = db.prepare(`SELECT * from card WHERE id=?`);
+  const data = query.get(req.params.id);
+
+  if (data) {
+    res.render("pages/card", data);
+  } else {
+    res.render("pages/card-not-found");
   }
 });
 
@@ -63,13 +60,25 @@ server.post("/card", (req, res) => {
     response.success = false;
     response.error = "No olvides rellenar el campo Github";
   } else {
-    // Falta bbdd que nos devolvera cardID
+    const query = db.prepare(
+      "INSERT INTO card (palette,name,job,email,phone,photo,linkedin,github) VALUES (?,?,?,?,?,?,?,?)"
+    );
+    const result = query.run(
+      req.body.palette,
+      req.body.name,
+      req.body.job,
+      req.body.email,
+      req.body.phone,
+      req.body.photo,
+      req.body.linkedin,
+      req.body.github
+    );
+
     response.success = true;
-    response.cardURL =
-      "https://awesome-profile-cards.herokuapp.com/card/${cardId}";
+    response.cardURL = `http://localhost:3000/card/${result.lastInsertRowid}`;
+    // || `http://https://happi-painters.herokuapp.com/#/card/${result.lastInsertRowid}`
   }
   res.json({ response });
-
 });
 
 server.get("*", (req, res) => {
