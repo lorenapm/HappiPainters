@@ -85,7 +85,7 @@ server.post("/card", (req, res) => {
 });
 
 server.get("*", (req, res) => {
-  const notFoundFileRelativePath = "../web/404-not-found.html";
+  const notFoundFileRelativePath = "../public/404-not-found.html";
   const notFoundFileAbsolutePath = path.join(
     __dirname,
     notFoundFileRelativePath
