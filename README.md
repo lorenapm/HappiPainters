@@ -14,8 +14,8 @@ Construido con 🛠️ React, ES6, JavaScript (JS), HTML5 y CSS3. Node JS y Expr
 
 Demo Para ver el resultado del desarrollo de la página web puedes visitar el siguiente enlace: http://happi-painters.herokuapp.com/#/
 
-<img src="web/src/images/photo-1.png" width=70%>
-<img src="web/src/images/photo-2.png" width=70%>
+<img src="web/src/images/photo-1.png" width=80%>
+<img src="web/src/images/photo-2.png" width=80%>
 
 # Getting Started with Create React App
 
