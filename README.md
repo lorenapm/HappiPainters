@@ -2,20 +2,20 @@
 
 ## HappiPainters: refactorizando con React
 
-**My professional card 📺 es un proyecto sencillo en equipo de desarrollo de una aplicación web que nos permite crear una tarjeta de visita profesional personalizada. Te permite introducir tus datos profesionales y de contacto, tu foto y guardarlo en local storage.**
+**HappiPainters 📺 es un proyecto de refactorización en React de un código heredado de una aplicación web que nos permite crear una tarjeta de visita profesional personalizada. Te permite introducir tus datos profesionales y de contacto, tu foto, guardarlo en local storage y generar tu targeta online para compartirla (a través de un enlace) con quien quieras.**
 
 Comenzando 🚀 Para utilizarla solo necesitas cargar el enlace y....tendrás tu tarjeta profesional un clic de distancia.
 
-Construido con 🛠️ JavaScript (JS), HTML5 y CSS3. Además, nos hemos servido del preprocesador SASS y de Gulp
+Construido con 🛠️ React, ES6, JavaScript (JS), HTML5 y CSS3. Node JS y Express JS para las peticiones a los servidores. SQL para bases de datos.
 
 **Se aceptan expresiones de gratitud tales como una cerveza 🍺 o un café ☕**
 
-**Nombre del equipo - Undefined:**
+**Nombre del equipo - HappiPainters:**
 
-Demo Para ver el resultado del desarrollo de la página web puedes visitar el siguiente enlace: http://beta.adalab.es/project-promo-m-module-2-team-5/
+Demo Para ver el resultado del desarrollo de la página web puedes visitar el siguiente enlace: http://happi-painters.herokuapp.com/#/
 
-<img src="src/images/readme-1.png" width=60%>
-<img src="src/images/readme-2.png" width=60%>
+<img src="web/src/images/photo-1.png" width=70%>
+<img src="web/src/images/photo-2.png" width=70%>
 
 # Getting Started with Create React App
 
